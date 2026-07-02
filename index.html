@@ -1,11 +1,603 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>web design main</title>
 </head>
 <body>
-    <h1>안녕</h1>
-</body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-top">
+        <h1 class="logo">
+          <a href="./index.html">offday</a>
+        </h1>
+    
+        <div class="search-box">
+          <input type="text" placeholder="수고한 오늘, 어떤 위로가 필요하신가요?" />
+          <button type="button" aria-label="검색">⌕</button>
+        </div>
+    
+        <div class="header-icons">
+          <button type="button" aria-label="좋아요">♡</button>
+    
+          <button type="button" class="cart-btn" aria-label="장바구니">
+            🛒
+            <span class="cart-count">3</span>
+          </button>
+    
+          <button type="button" aria-label="마이페이지">👤</button>
+        </div>
+      </div>
+    
+      <nav class="gnb">
+        <button type="button" class="category-btn" id="categoryBtn">
+          ☰ 카테고리
+        </button>
+        <a href="#">베스트</a>
+        <a href="#">할인</a>
+        <a href="#">신상</a>
+        <a href="#">선물세트</a>
+        <a href="#" class="event-link">쿠폰/이벤트</a>
+      </nav>
+    
+      <div class="category-menu" id="categoryMenu">
+        <div class="category-inner">
+          <div class="category-column">
+            <h3>메뉴 카테고리</h3>
+            <a href="#main-dish">메인식사류</a>
+            <a href="#side-dish">반찬류</a>
+            <a href="#bar-food">사이드류</a>
+            <a href="#snack-dessert">간식&스낵류</a>
+          </div>
+    
+          <div class="category-column">
+            <h3>테마별 추천</h3>
+            <a href="#">캠핑&여행 필수템</a>
+            <a href="#">다이어트&식단</a>
+            <a href="#">위로가 되는 야식</a>
+            <a href="#">나를 위한 혼술&혼밥</a>
+          </div>
+    
+          <div class="category-column">
+            <h3>고객지원</h3>
+            <a href="#">공지사항</a>
+            <a href="#">자주 묻는 질문</a>
+            <a href="#">1:1 문의하기</a>
+            <a href="#">대량구매 문의</a>
+          </div>
+    
+          <div class="category-benefit">
+            <span>Only offday</span>
+            <strong>첫 구매라면<br />누구나 50% 할인</strong>
+            <button type="button">혜택 받기</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main Visual -->
+    <section class="main-visual">
+      <img src="./images/main-visual.jpg" alt="offday 메인 비주얼 이미지" />
+    
+      <div class="main-visual-overlay"></div>
+    
+      <div class="main-visual-text">
+        <button type="button" class="play-btn" id="playBtn" aria-label="영상 재생">
+          ▶
+        </button>
+        <h2>지금은 OFF</h2>
+        <p>바쁜 하루 속 잠시 쉬어가는 시간</p>
+      </div>
+    
+      <div class="video-box" id="videoBox">
+        <div class="video-content">
+          <p>[브랜드 필름 영상 재생 중]</p>
+          <button type="button" id="closeVideoBtn">영상 닫기</button>
+        </div>
+      </div>
+    </section>
+    
+    <main>
+      <!-- Brand Story -->
+      <section class="brand-story section">
+        <span class="section-label">BRAND STORY</span>
+    
+        <h2>
+          쉴 틈 없이 달려온 오늘,<br />
+          온전히 나만을 위한 시간이 필요하지 않으신가요?
+        </h2>
+    
+        <p>
+          <strong>'offday'</strong>는 바쁜 일상의 스위치를 잠시 끄고(OFF),<br />
+          맛있는 음식과 함께 온전한 휴식을 누릴 수 있도록 돕는<br />
+          <strong>라이프스타일 간편식 브랜드</strong>입니다.
+        </p>
+    
+        <p>
+          복잡한 요리 과정은 덜어내고, 정성스러운 맛과 여유만 남겼습니다.<br />
+          오늘 하루도 수고한 당신에게 따뜻한 위로가 되는 한 끼를 선물하겠습니다.
+        </p>
+      </section>
+    
+      <!-- Promise -->
+      <section class="promise section">
+        <div class="section-title">
+          <span class="section-label">PROMISE</span>
+          <h2>offday의 3가지 약속</h2>
+        </div>
+    
+        <div class="promise-list">
+          <article class="promise-card">
+            <div class="promise-img">
+              <img src="./images/promise-01.jpg" alt="엄선된 로컬 식재료" />
+            </div>
+            <h3>엄선된 로컬 식재료</h3>
+            <p>
+              믿을 수 있는 농가에서 직접 공수한<br />
+              신선한 재료만을 사용합니다.
+            </p>
+          </article>
+    
+          <article class="promise-card">
+            <div class="promise-img">
+              <img src="./images/promise-02.jpg" alt="스타 셰프의 레시피" />
+            </div>
+            <h3>스타 셰프의 레시피</h3>
+            <p>
+              유명 레스토랑의 깊은 맛을 집에서도<br />
+              그대로 즐기실 수 있습니다.
+            </p>
+          </article>
+    
+          <article class="promise-card">
+            <div class="promise-img">
+              <img src="./images/promise-03.jpg" alt="전자레인지 3분 컷" />
+            </div>
+            <h3>전자레인지 3분 컷</h3>
+            <p>
+              복잡한 조리 과정 없이 데우기만 하면<br />
+              완벽한 요리가 완성됩니다.
+            </p>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Smart Package -->
+      <section class="smart-package section">
+        <div class="section-title">
+          <span class="section-label">Smart Package</span>
+          <h2>수고로움은 덜고, 감성은 더하고</h2>
+        </div>
+    
+        <div class="step-list">
+          <article class="step-card">
+            <span>Step 01</span>
+            <h3>가볍게 열고</h3>
+            <p>어떤 패키지든 손쉽게 열어주세요.</p>
+          </article>
+    
+          <article class="step-card">
+            <span>Step 02</span>
+            <h3>데우고</h3>
+            <p>전자레인지에 따뜻하게 데워주세요.</p>
+          </article>
+    
+          <article class="step-card">
+            <span>Step 03</span>
+            <h3>바로 즐기기</h3>
+            <p>나만의 취향을 담아 식사하세요.</p>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Time Section -->
+      <section class="time-section">
+        <div class="section-title">
+          <span class="section-label">TIME TO OFFDAY</span>
+          <h2>당신의 시간에 맞춘 완벽한 휴식</h2>
+          <p>offday와 함께하는 하루의 마무리</p>
+        </div>
+    
+        <div class="time-card-wrap">
+          <article class="time-card">
+            <img src="./images/time-0730.jpg" alt="PM 07:30 저녁 식사 이미지" />
+            <div class="time-text">
+              <span>PM 07:30</span>
+              <h3>
+                수고한 나를 위한<br />
+                가장 완벽한 3분
+              </h3>
+              <p>전자레인지에 돌리기만 하면 끝나는 든든한 저녁</p>
+            </div>
+          </article>
+    
+          <article class="time-card time-card-down">
+            <img src="./images/time-1000.jpg" alt="PM 10:00 야식 이미지" />
+            <div class="time-text">
+              <span>PM 10:00</span>
+              <h3>
+                모든 스위치를 끄고<br />
+                오롯이 취하는 시간
+              </h3>
+              <p>무거운 하루를 내려놓는 시원한 맥주와 꿀조합 안주</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Category Shortcut -->
+      <section class="category-shortcut section">
+        <div class="section-title">
+          <h2>어떤 휴식이 필요하신가요?</h2>
+          <p>당신의 OFF를 완벽하게 채워줄 메뉴를 골라보세요.</p>
+        </div>
+    
+        <div class="shortcut-list">
+          <a href="#main-dish" class="shortcut-item">
+            <img src="./images/category-main.jpg" alt="메인식사류" />
+            <span>#메인식사류</span>
+          </a>
+    
+          <a href="#side-dish" class="shortcut-item">
+            <img src="./images/category-side.jpg" alt="반찬류" />
+            <span>#반찬류</span>
+          </a>
+    
+          <a href="#bar-food" class="shortcut-item">
+            <img src="./images/category-bar.jpg" alt="사이드류" />
+            <span>#사이드류</span>
+          </a>
+    
+          <a href="#snack-dessert" class="shortcut-item">
+            <img src="./images/category-snack.jpg" alt="간식&스낵류" />
+            <span>#간식&스낵류</span>
+          </a>
+        </div>
+      </section>
+    
+      <!-- Category Detail -->
+      <section class="category-detail section">
+        <article class="category-row" id="main-dish">
+          <div class="category-text">
+            <span class="section-label">MAIN DISH</span>
+            <h2><em>01</em> 메인식사류</h2>
+            <p>
+              전자레인지 3분이면 완성되는 나만의 작은 레스토랑.<br />
+              든든한 메인 요리로 피로를 씻어내세요.
+            </p>
+            <a href="#">상품 보러가기 ❯</a>
+          </div>
+    
+          <div class="category-image">
+            <img src="./images/main-dish.jpg" alt="메인식사류 이미지" />
+          </div>
+        </article>
+    
+        <article class="category-row reverse" id="side-dish">
+          <div class="category-text">
+            <span class="section-label">SIDE DISH</span>
+            <h2><em>02</em> 반찬류</h2>
+            <p>
+              엄마의 정성 그대로,<br />
+              건강하게 채운 식탁을 선물합니다.
+            </p>
+            <a href="#">상품 보러가기 ❯</a>
+          </div>
+    
+          <div class="category-image">
+            <img src="./images/side-dish.jpg" alt="반찬류 이미지" />
+          </div>
+        </article>
+    
+        <article class="category-row" id="bar-food">
+          <div class="category-text">
+            <span class="section-label">BAR FOOD</span>
+            <h2><em>03</em> 사이드류</h2>
+            <p>
+              육퇴 후, 혹은 야근 후 즐기는 꿀 같은 혼술 타임.<br />
+              맥주 한 캔과 완벽하게 어울리는 맛있는 위로를 만나보세요.
+            </p>
+            <a href="#">상품 보러가기 ❯</a>
+          </div>
+    
+          <div class="category-image">
+            <img src="./images/bar-food.jpg" alt="사이드류 이미지" />
+          </div>
+        </article>
+    
+        <article class="category-row reverse" id="snack-dessert">
+          <div class="category-text">
+            <span class="section-label">SNACK & DESSERT</span>
+            <h2><em>04</em> 간식&스낵류</h2>
+            <p>
+              나른한 오후 3시, 커피 한 잔에 곁들이기 좋은 달콤한 휴식.<br />
+              스트레스를 사르르 녹여줄 디저트를 준비했어요.
+            </p>
+            <a href="#">상품 보러가기 ❯</a>
+          </div>
+    
+          <div class="category-image">
+            <img src="./images/snack-dessert.jpg" alt="간식&스낵류 이미지" />
+          </div>
+        </article>
+      </section>
+    
+      <!-- Healing Scene -->
+      <section class="healing-scene section">
+        <div class="section-title">
+          <h2>퇴근 후, 가장 완벽한 힐링 씬</h2>
+          <p>빨간색 마커에 마우스를 올려 offday의 꿀조합을 확인해 보세요.</p>
+        </div>
+    
+        <div class="scene-box">
+          <img src="./images/healing-scene.jpg" alt="퇴근 후 힐링 씬" />
+    
+          <div class="hotspot hotspot-1">
+            <button type="button">＋</button>
+            <div class="hotspot-card">
+              <span>전자레인지 3분 컷</span>
+              <strong>매콤 달콤 제육덮밥</strong>
+              <p>복잡한 요리 없이 간단하게!</p>
+            </div>
+          </div>
+    
+          <div class="hotspot hotspot-2">
+            <button type="button">＋</button>
+            <div class="hotspot-card">
+              <span>제육과 찰떡궁합</span>
+              <strong>시원한 캔맥주 한 잔</strong>
+              <p>오늘 하루의 피로를 씻어내요</p>
+            </div>
+          </div>
+    
+          <div class="hotspot hotspot-3">
+            <button type="button">＋</button>
+            <div class="hotspot-card">
+              <span>오롯한 내 시간</span>
+              <strong>밀린 드라마 정주행</strong>
+              <p>이 순간만큼은 스위치를 끄세요</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Welcome Gift -->
+      <section class="welcome-gift section">
+        <div>
+          <span>WELCOME GIFT</span>
+          <h2>당신의 첫 휴식을 지원합니다</h2>
+          <p>
+            수고한 나를 위한 첫 끼,
+            <strong>10,000원 혜택</strong>으로 시작해 보세요.
+          </p>
+        </div>
+    
+        <a href="#" class="gift-btn">쿠폰받고 시작하기</a>
+      </section>
+    
+      <!-- Best Products -->
+      <section class="best-products section">
+        <div class="section-head">
+          <div>
+            <h2>이달의 추천 큐레이션</h2>
+            <p>offday에서 가장 사랑받는 베스트셀러 Top 3</p>
+          </div>
+          <a href="#">전체 상품 보기 ❯</a>
+        </div>
+    
+        <div class="product-list">
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./images/best-01.jpg" alt="탱글한 통새우 볶음밥" />
+              <span>BEST 1</span>
+            </div>
+            <h3>탱글한 통새우 볶음밥</h3>
+            <div class="price">
+              <strong>15%</strong>
+              <b>8,100원</b>
+              <del>9,000원</del>
+            </div>
+            <a href="#reviews">리뷰 +1,204</a>
+          </article>
+    
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./images/best-02.jpg" alt="직화 매콤 무뼈 닭발" />
+              <span>BEST 2</span>
+            </div>
+            <h3>직화 매콤 무뼈 닭발</h3>
+            <div class="price">
+              <strong>15%</strong>
+              <b>7,990원</b>
+              <del>9,400원</del>
+            </div>
+            <a href="#reviews">리뷰 +999</a>
+          </article>
+    
+          <article class="product-card">
+            <div class="product-img">
+              <img src="./images/best-03.jpg" alt="꾸덕하고 고소한 진한 크림 파스타" />
+              <span>BEST 3</span>
+            </div>
+            <h3>꾸덕하고 고소한 진한 크림 파스타</h3>
+            <div class="price">
+              <strong>10%</strong>
+              <b>7,650원</b>
+              <del>8,500원</del>
+            </div>
+            <a href="#reviews">리뷰 +852</a>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Dessert & Snack -->
+      <section class="dessert-snack section">
+        <div class="section-head center-head">
+          <div>
+            <span class="section-label">Dessert & Snack</span>
+            <h2>하루의 끝, 나를 위한 완벽 보상</h2>
+            <p>기분 좋은 달콤함부터 바삭한 혼술 안주까지</p>
+          </div>
+          <a href="#">전체 상품 보기 ❯</a>
+        </div>
+    
+        <div class="wide-product-list">
+          <article class="wide-product-card">
+            <div class="wide-product-img">
+              <img src="./images/dessert-01.jpg" alt="진한 멜팅 퐁당 쇼콜라" />
+              <span>스트레스 OFF</span>
+            </div>
+    
+            <div class="wide-product-text">
+              <h3>진한 멜팅 퐁당 쇼콜라</h3>
+              <p>
+                1분만 데우면 완성. 따뜻한 초콜릿이 지친 하루를 달콤하게 녹여줍니다.
+              </p>
+    
+              <div class="price">
+                <strong>10%</strong>
+                <b>5,400원</b>
+                <del>6,000원</del>
+              </div>
+    
+              <a href="#reviews">리뷰 +540</a>
+            </div>
+          </article>
+    
+          <article class="wide-product-card">
+            <div class="wide-product-img">
+              <img src="./images/dessert-02.jpg" alt="버터 팝콘" />
+              <span>나만의 홈펍</span>
+            </div>
+    
+            <div class="wide-product-text">
+              <h3>버터 팝콘</h3>
+              <p>
+                포장만 뜯으면 나만의 펍 완성. 맥주와 완벽하게 어울리는 바삭한 팝콘.
+              </p>
+    
+              <div class="price">
+                <strong>15%</strong>
+                <b>3,400원</b>
+                <del>4,000원</del>
+              </div>
+    
+              <a href="#reviews">리뷰 +890</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Reviews -->
+      <section class="reviews section" id="reviews">
+        <div class="section-head">
+          <div>
+            <h2>offday와 함께한 휴식의 기록</h2>
+            <p>먼저 일상의 스위치를 끈 고객님들의 따뜻한 이야기</p>
+          </div>
+          <a href="#">후기 전체보기 &gt;</a>
+        </div>
+    
+        <div class="review-list">
+          <article class="review-card">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p>
+              "야근하고 돌아온 날, 배달 기다릴 힘도 없을 때 딱이에요.
+              3분 만에 차렸는데 웬만한 레스토랑보다 새우가 탱글하고 맛있습니다.
+              제대로 보상받는 기분이에요."
+            </p>
+            <div class="review-user">
+              <div class="user-img"></div>
+              <div>
+                <strong>user****</strong>
+                <span>우삼겹 된장찌개</span>
+              </div>
+            </div>
+          </article>
+    
+          <article class="review-card">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p>
+              "업무 스트레스가 극에 달했던 날, 시원한 캔맥주에 닭발 하나 꺼내 먹으니
+              피로가 사르르 풀리네요. 불향이 짙게 배어 있어서 내 방이 심야식당이 된 것 같아요."
+            </p>
+            <div class="review-user">
+              <div class="user-img"></div>
+              <div>
+                <strong>foodie_88</strong>
+                <span>직화 매콤 무뼈 닭발</span>
+              </div>
+            </div>
+          </article>
+    
+          <article class="review-card">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p>
+              "정말 우울했던 하루, 1분 데운 퐁당 쇼콜라 한 입에 스트레스가 다 녹아내렸어요.
+              꾸덕하고 진한 초콜릿이 웬만한 고급 카페 디저트보다 훨씬 훌륭합니다.
+              나를 위한 완벽한 보상이에요!"
+            </p>
+            <div class="review-user">
+              <div class="user-img"></div>
+              <div>
+                <strong>sweet_day</strong>
+                <span>진한 멜팅 퐁당 쇼콜라</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h2>offday</h2>
+          <p>지금은 OFF</p>
+          <p>바쁜 하루 속 잠시 쉬어가는 시간</p>
+    
+          <div class="cs-info">
+            <p>고객센터 1588-0000</p>
+            <p>평일 09:00 - 18:00 (주말/공휴일 휴무)</p>
+            <p>이메일: help@offday.co.kr</p>
+          </div>
+        </div>
+    
+        <div class="footer-menu">
+          <div>
+            <h3>offday 소개</h3>
+            <a href="#">브랜드 스토리</a>
+            <a href="#">채용정보</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+          </div>
+    
+          <div>
+            <h3>고객지원</h3>
+            <a href="#">공지사항</a>
+            <a href="#">자주 묻는 질문</a>
+            <a href="#">1:1 문의</a>
+            <a href="#">챗봇 상담</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>
+          상호명: (주)offday | 대표자: 김지원 | 사업자등록번호: 123-45-67890<br />
+          통신판매업신고번호: 제2026-서울강남-0000호 | 주소: 서울특별시 강남구 오프데이로 123<br />
+          개인정보보호책임자: 홍길동 | 호스팅서비스사업자: (주)offday<br />
+          © 2026 offday. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    
+    <!-- Floating Button -->
+    <div class="floating-buttons">
+      <button type="button" id="topBtn" aria-label="위로 가기">↑</button>
+      <button type="button" aria-label="채팅 상담">💬</button>
+    </div>
+    
 </html>
